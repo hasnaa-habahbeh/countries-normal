@@ -1,0 +1,69 @@
+:root {
+    --darkBlue: hsl(209, 23%, 22%); /* Dark Mode Elements */
+    --input: hsl(0, 0%, 52%);
+    --primary-background: hsl(0, 0%, 98%);
+    --secondary-background: hsl(0, 0%, 100%);
+    --shadow: hsl(0, 0%, 88%);
+    --text: hsl(200, 15%, 8%);
+    --veryDarkBlueBG: hsl(207, 26%, 17%); /* Dark Mode Background */
+}
+
+body {
+    color: var(--text);
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--text);
+}
+
+.padding {
+    padding: 30px 50px;
+}
+
+.header {
+    align-items: center;
+    background-color: var(--secondary-background);
+    box-shadow: 0 2px 5px var(--shadow);
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    position:relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.site-heading {
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.toggle-mode {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 30px;
+}
+
+.moon-icon {
+    display: inline-block;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    .site-heading {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .toggle-mode {
+        font-size: 16px;
+    }
+}

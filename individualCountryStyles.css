@@ -1,0 +1,134 @@
+[data-theme="dark"] {
+    --input: hsl(0, 0%, 82%);
+    --primary-background: hsl(207, 26%, 17%);
+    --secondary-background: hsl(209, 23%, 22%);
+    --shadow: hsl(218, 12%, 13%);
+    --text: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--primary-background);
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.main {
+    height: calc(100vh - 80px);
+}
+
+.back-button,
+.border-country-button {
+    background-color: var(--secondary-background);
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 2px 5px var(--shadow);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0 50px;
+    padding: 10px 40px;
+}
+
+.back-button .icon {
+    margin: 0 4px -2px 0;
+}
+
+.individualCountry {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12%;
+    height: 450px;
+    justify-content: flex-start;
+}
+
+.country-flag {
+    box-shadow: 0 2px 5px var(--shadow);
+    height: 100%;
+    max-width: 650px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.country-name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100px;
+}
+
+.category {
+    font-weight: 700;
+}
+
+.info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.info-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.country-info2 {
+    margin-top: 25px;
+}
+
+.border-countries-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.border-country-button {
+    margin: 0;
+}
+
+.border-countries-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+    .main {
+        height: 120vh;
+    }
+
+    .individualCountry,
+    .info-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-container {
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .info {
+        margin-top: 30px;
+    }
+
+    .country-name {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body,
+    .back-button,
+    .border-country-button {
+        font-size: 14px;
+    }
+}
